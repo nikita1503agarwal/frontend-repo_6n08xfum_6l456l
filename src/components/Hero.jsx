@@ -1,32 +1,38 @@
-import Spline from '@splinetool/react-spline';
+import React from 'react';
+import { Rocket, Star } from 'lucide-react';
 
-export default function Hero() {
+const Hero = () => {
   return (
-    <section className="relative min-h-[70vh] w-full overflow-hidden" id="hero">
-      <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/hGDm7Foxug7C6E8s/scene.splinecode" style={{ width: '100%', height: '100%' }} />
-      </div>
-
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
-            Navigate campus life with confidence
+    <section className="relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 to-white pointer-events-none" />
+      <div className="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center relative">
+        <div>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
+            Your all-in-one campus companion
           </h1>
-          <p className="mt-4 text-zinc-700 dark:text-zinc-300 text-base sm:text-lg">
-            CollegeMate is your companion for maps, marketplace, clubs, notifications, feedback, and a vibrant Q&A forum — crafted for students of P.D.A. College of Engineering, Gulbarga.
+          <p className="mt-4 text-slate-600 leading-relaxed">
+            Organize classes, discover clubs, trade in the student marketplace, and stay updated with real-time campus buzz — all in one sleek interface.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a href="#map" className="inline-flex items-center rounded-full bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 text-sm font-medium shadow">
-              Explore Campus Map
-            </a>
-            <a href="#market" className="inline-flex items-center rounded-full border border-zinc-300/70 dark:border-zinc-700/70 px-5 py-2.5 text-sm font-medium text-zinc-800 dark:text-zinc-100 hover:bg-zinc-100/60 dark:hover:bg-zinc-800/60">
-              Browse Marketplace
-            </a>
+          <div className="mt-6 flex items-center gap-3">
+            <button className="inline-flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg shadow hover:bg-indigo-500 transition-colors">
+              <Rocket className="h-4 w-4" />
+              Get Started
+            </button>
+            <button className="inline-flex items-center gap-2 text-indigo-700 px-4 py-2 rounded-lg hover:bg-indigo-50">
+              <Star className="h-4 w-4" />
+              See Features
+            </button>
+          </div>
+        </div>
+        <div className="relative">
+          <div className="aspect-video rounded-2xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 shadow-lg" />
+          <div className="absolute -bottom-4 -right-4 bg-white shadow rounded-xl px-4 py-3 text-sm text-slate-700">
+            Real-time updates enabled
           </div>
         </div>
       </div>
-
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/60 via-white/20 to-white dark:from-black/60 dark:via-black/20 dark:to-black" />
     </section>
   );
-}
+};
+
+export default Hero;
