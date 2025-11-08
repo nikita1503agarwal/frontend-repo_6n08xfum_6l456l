@@ -1,7 +1,10 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import FeatureGrid from './components/FeatureGrid';
-import Sections from './components/Sections';
+import AuthPanel from './components/AuthPanel';
+import GeoMap from './components/GeoMap';
+import MarketClubsQA from './components/MarketClubsQA';
+import RealtimeStream from './components/RealtimeStream';
 import Footer from './components/Footer';
 
 function App() {
@@ -11,7 +14,10 @@ function App() {
       <main>
         <Hero />
         <FeatureGrid />
-        <Sections />
+        <AuthPanel />
+        <GeoMap />
+        <MarketClubsQA />
+        <RealtimeStream />
       </main>
       <Footer />
     </div>
